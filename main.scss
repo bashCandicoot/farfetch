@@ -1,12 +1,13 @@
 .Homepage {
 	display: grid;
-	font-family: sans-serif;
 	grid-gap: 10px;
 	grid-template-rows: 30px 35px 1fr;
+	
+	font-family: sans-serif;
 	max-width: 1440px;
 	margin: auto;
 	color: #333333;
-
+	line-height: 20px;
 
 	&-TopMenuBar {
 		display: flex;
@@ -32,17 +33,23 @@
 	}
 
 	&-MessageBar {
+		position: relative;
 		display: flex;
+		max-width: 95%;
+		justify-content: space-between;
 		background-color: rgb(211, 211, 211);
 		padding: 10px;
+
+		:first-child {
+			// margin-right: auto;
+		}
+		:last-child {
+			// color: #333333;
+		}
 
 		&-message {
 			font-weight: bold;
 			color: rgb(219, 68, 93);
-		}
-
-		:first-child {
-			margin-right: auto;
 		}
 	}
 
@@ -54,20 +61,31 @@
 
 	&-promotionImage {
 		position: absolute;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
 		top: 18%;
-		left: 37%;
+		left: 50%;
 		max-width: 25%;	
+	}
+
+	&-ShopButtonContainer {
+		// position: block;
+		// max-width: 200px;
 	}
 
 	&-Content {
 		position: absolute;
 		top: 35%;
-		margin: auto;
+		// margin: auto;
 		text-align: center;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
 
 		&-title {
 			font-weight: bold;
 			font-size: 30px;
+			width: 500px;
 		}
 
 		&-body {
@@ -77,10 +95,12 @@
 			margin: auto;
 		}
 
+
+
 		&-shopButton {
 			font-weight: bold;
 			padding: 7px;
-			min-width: 200px;
+			min-width: 170px;
 			min-height: 40px;
 			color: white;
 			background-color: #333333;
@@ -99,7 +119,7 @@
 
 	&-Footer {
 		&-terms {
-			padding-top:20%;
+			padding-top: 20%;
 			font-weight: lighter;
 		}
 	}
@@ -109,8 +129,28 @@
 @media (min-width: 650px) {
 	.Homepage {
 		&-promotionImage {
-			left: 42%;
+			top: 6%; 
 			max-width: 15%;
+		}
+		&-Content {
+			top: 28%;
+			&-title {
+				font-size: 20px;
+			}
+			&-body {
+				font-size: 13px;
+				max-width: 95%;
+				width: 300px;
+			}
+			&-shopButton {
+				min-height: 20px;
+			}
+		}
+		&-Footer {
+			&-terms {
+				font-size: 12px;
+				padding-top: 5%;
+			}
 		}
 	}
 }
@@ -118,7 +158,7 @@
 @media (min-width: 1025px) {
 	.Homepage {
 		&-promotionImage {
-			left: 44%;
+			top: 7%; 
 			max-width: 10%;
 		}
 	}
