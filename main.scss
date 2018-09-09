@@ -3,7 +3,6 @@
 	font-family: sans-serif;
 	grid-gap: 10px;
 	grid-template-rows: 30px 35px 1fr;
-	align-items: center;
 	max-width: 1440px;
 	margin: auto;
 
@@ -46,52 +45,69 @@
 		}
 	}
 
-	&-Content {
+	&-backgroundImage {
 		position: relative;
     display: inline;
 		max-width: 100%;
 	}
 
-	&-Offer {
+	&-promotionImage {
 		position: absolute;
 		top: 18%;
 		left: 37%;
-		max-width: 25%;
+		max-width: 25%;	
+	}
 
-		&-Text {
-			position: absolute;
-			top: 35%;
-			margin: auto;
-			text-align: center;
+	&-Content {
+		position: absolute;
+		top: 35%;
+		margin: auto;
+		text-align: center;
 
-			&-title {
-				font-weight: bold;
-				font-size: 30px;
-			}
-
-			&-content {
-				padding-top: 25px;
-				max-width: 55%;
-				margin: auto;
-				text-align: center;
-			}
-
-			&-emphasis {
-				font-weight: bold;
-			}
+		&-title {
+			font-weight: bold;
+			font-size: 30px;
 		}
+
+		&-body {
+			padding-top: 25px;
+			padding-bottom: 15px;
+			max-width: 55%;
+			margin: auto;
+		}
+
+		&-shopButton {
+			padding: 7px;
+			min-width: 200px;
+			margin: auto;
+			color: white;
+			text-decoration: none;
+			background-color: #333333;
+			border-radius: 8px;
+			border-color: #333333;
+		}
+	}
+
+	&-margin {
+		margin-top: 20px;
+	}
+
+	&-emphasis {
+		font-weight: bold;
 	}
 
 	&-Footer {
 		&-terms {
+			padding-top:20%;
 			font-weight: lighter;
 		}
 	}
+
 }
 
 @media (min-width: 650px) {
 	.Homepage {
-		&-Offer {
+		&-promotionImage {
 			left: 42%;
 			max-width: 15%;
 		}
@@ -100,7 +116,7 @@
 
 @media (min-width: 1025px) {
 	.Homepage {
-		&-Offer {
+		&-promotionImage {
 			left: 44%;
 			max-width: 10%;
 		}
