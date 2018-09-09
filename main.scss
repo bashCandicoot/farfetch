@@ -5,6 +5,7 @@
 	grid-template-rows: 30px 35px 1fr;
 	max-width: 1440px;
 	margin: auto;
+	color: #333333;
 
 
 	&-TopMenuBar {
@@ -77,14 +78,14 @@
 		}
 
 		&-shopButton {
+			font-weight: bold;
 			padding: 7px;
 			min-width: 200px;
-			margin: auto;
+			min-height: 40px;
 			color: white;
-			text-decoration: none;
 			background-color: #333333;
-			border-radius: 8px;
 			border-color: #333333;
+			border-radius: 5px;
 		}
 	}
 
