@@ -3,7 +3,6 @@
 	font-family: sans-serif;
 	grid-gap: 10px;
 	grid-template-rows: 30px 35px 1fr;
-	margin: 0px;
 	align-items: center;
 	max-width: 1440px;
 	margin: auto;
@@ -14,17 +13,21 @@
     flex-direction: row;
 		justify-content: space-around;
 		padding: 10px 0px 0px 0px;
+		> Icon {
+			cursor: pointer;
+		}
 
 		&-logoContainer {
 		
 		}
 
 		&-starred {
+			padding-top: 20px;
+			margin-top: 15px;
 			color: grey;
 		}
 		&-star {
-			// width: 5px;
-			// margin-bottom: 10px;
+			// color: red;
 		}
 	}
 
@@ -43,7 +46,7 @@
 		}
 	}
 
-	&-Background {
+	&-Content {
 		position: relative;
     display: inline;
 		max-width: 100%;
@@ -54,13 +57,42 @@
 		top: 18%;
 		left: 37%;
 		max-width: 25%;
+
+		&-Text {
+			position: absolute;
+			top: 35%;
+			margin: auto;
+			text-align: center;
+
+			&-title {
+				font-weight: bold;
+				font-size: 30px;
+			}
+
+			&-content {
+				padding-top: 25px;
+				max-width: 55%;
+				margin: auto;
+				text-align: center;
+			}
+
+			&-emphasis {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&-Footer {
+		&-terms {
+			font-weight: lighter;
+		}
 	}
 }
 
 @media (min-width: 650px) {
 	.Homepage {
 		&-Offer {
-			left: 43%;
+			left: 42%;
 			max-width: 15%;
 		}
 	}
@@ -69,7 +101,7 @@
 @media (min-width: 1025px) {
 	.Homepage {
 		&-Offer {
-			left: 43%;
+			left: 44%;
 			max-width: 10%;
 		}
 	}
