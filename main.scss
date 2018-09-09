@@ -41,10 +41,10 @@
 		padding: 10px;
 
 		:first-child {
-			// margin-right: auto;
+			padding-left: 15px;
 		}
 		:last-child {
-			// color: #333333;
+			padding-right: 15px;
 		}
 
 		&-message {
@@ -94,8 +94,6 @@
 			max-width: 55%;
 			margin: auto;
 		}
-
-
 
 		&-shopButton {
 			font-weight: bold;
