@@ -1,0 +1,61 @@
+.Homepage {
+	display: grid;
+	font-family: sans-serif;
+	grid-gap: 10px;
+	grid-template-rows: 30px 35px 1fr;
+	margin: 0px;
+
+
+	&-TopMenuBar {
+		display: flex;
+    flex-direction: row;
+		justify-content: space-around;
+		padding: 10px 0px 0px 0px;
+
+		&-logoContainer {
+		
+		}
+
+		&-starred {
+			color: grey;
+		}
+		&-star {
+			// width: 5px;
+			// margin-bottom: 10px;
+		}
+	}
+
+	&-MessageBar {
+		display: flex;
+		background-color: rgb(211, 211, 211);
+		padding: 10px;
+
+		&-message {
+			font-weight: bold;
+			color: rgb(219, 68, 93);
+		}
+
+		:first-child {
+			margin-right: auto;
+		}
+	}
+
+	&-Background {
+		display: block;
+		color: red;
+		// width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+
+
+
+$color: white;
+
+body {
+		background-color: $color;
+}
+
+
