@@ -4,6 +4,9 @@
 	grid-gap: 10px;
 	grid-template-rows: 30px 35px 1fr;
 	margin: 0px;
+	align-items: center;
+	max-width: 1440px;
+	margin: auto;
 
 
 	&-TopMenuBar {
@@ -41,21 +44,37 @@
 	}
 
 	&-Background {
-		display: block;
-		color: red;
-		// width: 100%;
-		height: auto;
+		position: relative;
+    display: inline;
 		max-width: 100%;
+	}
+
+	&-Offer {
+		position: absolute;
+		top: 18%;
+		left: 37%;
+		max-width: 25%;
+	}
+}
+
+@media (min-width: 650px) {
+	.Homepage {
+		&-Offer {
+			left: 43%;
+			max-width: 15%;
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.Homepage {
+		&-Offer {
+			left: 43%;
+			max-width: 10%;
+		}
 	}
 }
 
 
-
-
-$color: white;
-
-body {
-		background-color: $color;
-}
 
 

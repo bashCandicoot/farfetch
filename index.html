@@ -38,7 +38,16 @@
 			<icon class="icon-plus" name="show-message"></icon>
 		</div>
 
-		<img src="assets/Img-mobile.jpg" class="Homepage-Background" alt="background">
+		<div class="Homepage-Background">
+			<picture>
+				<source media="(min-width: 1360px)" srcset="assets/Img-desktop.jpg">
+				<source media="(min-width: 1025px)" srcset="assets/Img-laptop.jpg">
+				<source media="(min-width: 650px)" srcset="assets/Img-tablet.jpg">
+				<img src="assets/Img-mobile.jpg" class="Homepage-Background" alt="background">
+			</picture>
+			<img src="assets/AXP_BlueBoxLogo_REGULARscale_RGB_DIGITAL_170x170.png" class="Homepage-Offer" alt="offer">
+		</div>
+
 			
 		</div>
   </body>
