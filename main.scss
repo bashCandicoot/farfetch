@@ -1,3 +1,6 @@
+$black: #333333;
+$red: #DB445D;
+
 .Homepage {
 	display: grid;
 	grid-gap: 10px;
@@ -6,7 +9,7 @@
 	font-family: sans-serif;
 	max-width: 1440px;
 	margin: auto;
-	color: #333333;
+	color: $black;
 	line-height: 20px;
 
 	&-TopMenuBar {
@@ -19,7 +22,8 @@
 		}
 
 		&-logoContainer {
-		
+			max-height: 20px;
+			width: auto;
 		}
 
 		&-starred {
@@ -32,10 +36,13 @@
 		}
 	}
 
+	&-CategoryMenuBar {
+		display: none;
+	}
+
 	&-MessageBar {
 		position: relative;
 		display: flex;
-		max-width: 95%;
 		justify-content: space-between;
 		background-color: rgb(211, 211, 211);
 		padding: 10px;
@@ -49,7 +56,7 @@
 
 		&-message {
 			font-weight: bold;
-			color: rgb(219, 68, 93);
+			color: $red;
 		}
 	}
 
@@ -69,14 +76,12 @@
 	}
 
 	&-ShopButtonContainer {
-		// position: block;
-		// max-width: 200px;
+		display: inline-grid;
 	}
 
 	&-Content {
 		position: absolute;
 		top: 35%;
-		// margin: auto;
 		text-align: center;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
@@ -126,12 +131,35 @@
 
 @media (min-width: 650px) {
 	.Homepage {
+
+		grid-template-rows: 45px 35px 35px 1fr;
+
+		&-TopMenuBar {
+			icon {
+				margin-top: 10px;
+			}
+			&-logoContainer {
+				max-height: 30px;
+				width: auto;
+			}
+		}
+
+		&-MessageBar {
+			&-message {
+				color: rgb(175, 175, 28);
+			}
+		}
+
+		&-ShopButtonContainer {
+			display: block;
+		}
+
 		&-promotionImage {
-			top: 6%; 
+			margin-top: 3%; 
 			max-width: 15%;
 		}
 		&-Content {
-			top: 28%;
+			margin-top: 20%;
 			&-title {
 				font-size: 20px;
 			}
@@ -156,9 +184,28 @@
 @media (min-width: 1025px) {
 	.Homepage {
 		&-promotionImage {
-			top: 7%; 
+			margin-top: 3%; 
 			max-width: 10%;
 		}
+
+		&-Content {
+			margin-top: 15%;
+		}
+
+		&-MessageBar {
+			justify-content: center;
+			&-message {
+				color: $red;
+				a {
+					color: $black;
+					text-decoration: underline;
+					font-weight: lighter;
+				}
+			}
+		}
+	}
+	.icon-plus {
+		display: none;
 	}
 }
 
