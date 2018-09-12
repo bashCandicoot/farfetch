@@ -13,23 +13,38 @@ $red: #DB445D;
 	line-height: 20px;
 
 	&-TopMenuBar {
-		display: flex;
-    flex-direction: row;
-		justify-content: space-around;
 		padding: 10px 0px 0px 0px;
-		> Icon {
+		display: flex;
+		
+		&-icon {
+			position: absolute;
 			cursor: pointer;
 		}
+		
+		&-icon:first-child {
+			left: 2%;
+		}
+		&-icon:nth-child(2) {
+			left: 18%;
+		}
+		&-icon:nth-child(4) {
+			left: 78%;
+		}
+		&-icon:last-child {
+			left: 95%;
+		}
 
-		&-logoContainer {
+		&-logo {
+			display: table;
+			margin: 0 auto;
 			max-height: 20px;
 			width: auto;
 		}
 
 		&-starred {
-			padding-top: 20px;
-			margin-top: 15px;
-			color: grey;
+			// padding-top: 20px;
+			// margin-top: 15px;
+			// color: grey;
 		}
 		&-star {
 			// color: red;
@@ -135,10 +150,23 @@ $red: #DB445D;
 		grid-template-rows: 45px 35px 35px 1fr;
 
 		&-TopMenuBar {
-			icon {
-				margin-top: 10px;
+			&-icon {
+				padding-top: 10px;
 			}
-			&-logoContainer {
+		
+			&-icon:first-child {
+				left: 2%;
+			}
+			&-icon:nth-child(2) {
+				left: 8%;
+			}
+			&-icon:nth-child(4) {
+				left: 86%;
+			}
+			&-icon:last-child {
+				left: 94%;
+			}
+			&-logo {
 				max-height: 30px;
 				width: auto;
 			}
