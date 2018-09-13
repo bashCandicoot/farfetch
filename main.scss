@@ -228,6 +228,7 @@ $red: #DB445D;
 			}
 			&-logo {
 				max-height: 40px;
+				padding-right: 200px;
 				width: auto;
 			}
 			&-options {
@@ -257,6 +258,19 @@ $red: #DB445D;
 			font-size: 12px;
 			font-weight: bold;
 			padding-left: 20px;
+		}
+
+		&-searchWithIcon {
+			margin-left: auto;
+			&-search {
+				padding: 0px 10px;
+				height: 30px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				
+				background-repeat: no-repeat;
+				background-position: right;
+			}
 		}
 
 		&-promotionImage {
@@ -296,8 +310,7 @@ $red: #DB445D;
 			left: 94%;
 		}
 		.icon-arrow-down {
-			color:rebeccapurple;
-			// scale
+			padding-left: 8px;
 		}
 	
 		.icon-plus, .icon-menu, .icon-magnifier {
