@@ -8,6 +8,8 @@ Setup:
 
 ```npm install``` 
 
+Open the following file in a browser ```farfetch/task1/index.html```
+
 If you want to make changes ```npm run watch```
 
 I used ```simplelineicons``` for the icon pack which look slightly different from the ones used in the design.
