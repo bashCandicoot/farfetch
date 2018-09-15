@@ -1,5 +1,4 @@
 require('./main.scss')
-
 import _forEach from 'lodash/forEach';
 
 let messageValue = document.getElementsByClassName('Homepage-MessageBar-message')[0];
@@ -18,12 +17,22 @@ const screenSize = {
 
 _forEach(screenSize, (size, message) => {
 	const query = window.matchMedia(size);
-	console.log(query)
 	query.addListener(updateMessage.bind(this, query, message));
 	updateMessage(query, message);
 });
 
-
 function updateMessage(query, message){
 	if(query.matches) messageValue.innerHTML = message;
 }
+
+// translate content example
+
+// const translate = require('google-translate')(apiKey);
+
+
+// async function translateText(language) {
+// 	[...document.querySelectorAll(".Homepage")]
+// 		.forEach(text => await translate(text, {to: language}));
+// }
+
+// translateText('fr')

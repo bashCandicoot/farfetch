@@ -1078,6 +1078,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 require('./main.scss');
 
+
 var messageValue = document.getElementsByClassName('Homepage-MessageBar-message')[0];
 
 var messageBar = {
@@ -1090,7 +1091,6 @@ var screenSize = (_screenSize = {}, _defineProperty(_screenSize, messageBar.mobi
 
 (0, _forEach3.default)(screenSize, function (size, message) {
 	var query = window.matchMedia(size);
-	console.log(query);
 	query.addListener(updateMessage.bind(undefined, query, message));
 	updateMessage(query, message);
 });
@@ -1098,5 +1098,17 @@ var screenSize = (_screenSize = {}, _defineProperty(_screenSize, messageBar.mobi
 function updateMessage(query, message) {
 	if (query.matches) messageValue.innerHTML = message;
 }
+
+// translate content example
+
+// const translate = require('google-translate')(apiKey);
+
+
+// async function translateText(language) {
+// 	[...document.querySelectorAll(".Homepage")]
+// 		.forEach(text => await translate(text, {to: language}));
+// }
+
+// translateText('fr')
 
 },{"./main.scss":1,"lodash/forEach":26}]},{},[40]);
