@@ -1,5 +1,7 @@
 # Marketing/Production Frontend Developer
 
+![alt text](screenshot.png)
+
 ## Task 1
 
 Setup:
