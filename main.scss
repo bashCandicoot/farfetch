@@ -13,6 +13,7 @@ $red: #DB445D;
 	line-height: 20px;
 
 	&-TopMenuBar {
+		position: relative;
 		padding: 10px 0px 0px 0px;
 		display: flex;
 
@@ -23,7 +24,33 @@ $red: #DB445D;
 			display: none;
 		}
 		
-		&-icon {
+		&-icon-menu {
+			position: absolute;
+			cursor: pointer;
+			left: 2%;
+		}
+		&-icon-magnifier {
+			position: absolute;
+			cursor: pointer;
+			left: 18%;
+		}
+		&-icon-star {
+			position: absolute;
+			cursor: pointer;
+			left: 78%;
+		}
+		&-icon-handbag {
+			position: absolute;
+			cursor: pointer;
+			left: 95%;
+		}
+		&-icon-user {
+			display: none;
+			position: absolute;
+			cursor: pointer;
+		}
+		&-icon-bell {
+			display: none;
 			position: absolute;
 			cursor: pointer;
 		}
@@ -37,27 +64,6 @@ $red: #DB445D;
 			// lower number
 		// }
 	}
-
-	.icon-menu {
-		left: 2%;
-	}
-	.icon-magnifier {
-		left: 18%;
-	}
-	.icon-star {
-		left: 78%;
-	}
-	.icon-handbag {
-		left: 95%;
-	}
-	.icon-user {
-		display: none;
-	}
-	.icon-bell {
-		display: none;
-	}
-			// color: grey;
-
 
 	&-CategoryMenuBar {
 		display: none;
@@ -161,16 +167,16 @@ $red: #DB445D;
 			&-icon {
 				padding-top: 10px;
 			}	
-			.icon-menu {
+			&-icon-menu {
 				left: 2%;
 			}
-			.icon-magnifier {
+			&-icon-magnifier {
 				left: 8%;
 			}
-			.icon-star {
+			&-icon-star {
 				left: 86%;
 			}
-			.icon-handbag {
+			&-icon-handbag {
 				left: 94%;
 			}
 			&-logo {
@@ -221,10 +227,29 @@ $red: #DB445D;
 		
 		&-TopMenuBar {
 			&-icon {
-				padding-top: 10px;
+				&-user {
+					padding-top: 10px;
+					display: block;
+					left: 82%;
+				}
+				&-star {
+					padding-top: 10px;
+					left: 86%;
+				}
+				&-handbag {
+					padding-top: 10px;
+					left: 90%;
+				}
+				&-bell {
+					padding-top: 10px;
+					display: block;
+					left: 94%;
+				}
 			}
-			&-icon.icon-magnifier {
-				display: none;
+			&-icon {
+				&-magnifier {
+					display: none;
+				}
 			}
 			&-starred {
 				display: none;
@@ -246,6 +271,9 @@ $red: #DB445D;
 			&-demographicContainer {
 				padding-left: 30px;
 			}
+			.icon-arrow-down {
+				padding-left: 8px;
+			}
 		}
 
 		&-lighter-text {
@@ -258,28 +286,42 @@ $red: #DB445D;
 		}
 
 		&-category {
+			transform:scale(0.9,1);
+			letter-spacing: 1px;
 			font-size: 12px;
 			font-weight: bold;
-			padding-left: 20px;
+			padding-left: 10px;
 			padding-top: 5px;
+			&-selected {
+				position: relative;
+			}
+			&-selected:after {
+				content:""; 
+				background: black; 
+				position: absolute; 
+				bottom: -2; 
+				left: 11; 
+				height: 4px; 
+				width: 45px;
+			}
 		}
 
-		&-searchBar {
-			margin-bottom: 10px;
+		&-search {
+			position: relative;
 			margin-left: auto;
-			padding: 0px 10px 0px 10px;
-			height: 30px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			
-			background-repeat: no-repeat;
-			background-position: right;
-		}
 
-		&-icon {
-			position:absolute;
-			margin-left:75%;
-			top:9%;
+			&-bar {
+				padding: 0px 10px 0px 5px;
+				height: 30px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+
+			&-icon {
+				position:absolute;
+				margin-left: 80%;
+				top: 25%;
+			}
 		}
 
 		&-promotionImage {
@@ -302,24 +344,6 @@ $red: #DB445D;
 					font-weight: lighter;
 				}
 			}
-		}
-
-		.icon-user {
-			display: block;
-			left: 82%;
-		}
-		.icon-star {
-			left: 86%;
-		}
-		.icon-handbag {
-			left: 90%;
-		}
-		.icon-bell {
-			display: block;
-			left: 94%;
-		}
-		.icon-arrow-down {
-			padding-left: 8px;
 		}
 	
 		.icon-plus, .icon-menu {

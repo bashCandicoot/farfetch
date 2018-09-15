@@ -12,8 +12,8 @@ const messageBar = {
 
 const screenSize = {
 	[messageBar.mobile]: 'screen and (min-width:1px) and (max-width:650px)',
-	[messageBar.tablet]: 'screen and (min-width:651px) and (max-width:1025px)',
-	[messageBar.desktop]: 'screen and (min-width:1026px) and (max-width:1440px)'
+	[messageBar.tablet]: 'screen and (min-width:651px) and (max-width:1026px)',
+	[messageBar.desktop]: 'screen and (min-width:1027px) and (max-width:1440px)'
 };
 
 _forEach(screenSize, (size, message) => {
