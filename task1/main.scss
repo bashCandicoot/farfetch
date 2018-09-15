@@ -60,9 +60,12 @@ $red: #DB445D;
 			max-height: 20px;
 		}
 
-		// &-starred {
-			// lower number
-		// }
+		&-starred {
+			display: inline-block;
+			color: grey;
+			font-weight: bold;
+			transform: translate(-8px, 5px);
+		}
 	}
 
 	&-CategoryMenuBar {
@@ -176,6 +179,9 @@ $red: #DB445D;
 			&-icon-star {
 				left: 86%;
 			}
+			&-starred {
+				display: none;
+			}
 			&-icon-handbag {
 				left: 94%;
 			}
@@ -251,12 +257,9 @@ $red: #DB445D;
 					display: none;
 				}
 			}
-			&-starred {
-				display: none;
-			}
 			&-logo {
 				max-height: 40px;
-				padding-right: 200px;
+				padding-right: 250px;
 				width: auto;
 			}
 			&-options {
